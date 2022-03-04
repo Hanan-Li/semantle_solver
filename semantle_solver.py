@@ -31,7 +31,3 @@ while True:
         if pot_word.isalnum():
             keys.append(pot_word)
     print(keys)
-
-
-sims = model.most_similar('market', topn=100)
-print(sims)
