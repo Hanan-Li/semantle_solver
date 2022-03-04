@@ -5,7 +5,6 @@ import gensim
 from nltk.corpus import stopwords
 from nltk import word_tokenize
 from gensim.models import Word2Vec as w2v
-from sklearn.decomposition import PCA
 
 # constants
 PATH = '/path/to/GoogleNews-vectors-negative300.bin'
