@@ -7,7 +7,7 @@ from nltk import word_tokenize
 from gensim.models import Word2Vec as w2v
 
 # constants
-PATH = '/path/to/GoogleNews-vectors-negative300.bin'
+PATH = 'GoogleNews-vectors-negative300.bin'
 print("Loading Model")
 model = gensim.models.KeyedVectors.load_word2vec_format(PATH, binary=True)
 print("Finished Loading Model")
@@ -30,4 +30,7 @@ while True:
     for pot_word in potential_words:
         if pot_word.isalnum():
             keys.append(pot_word)
-    print(keys)
+    if len(keys) > 100:
+        print(keys[:100])
+    else:
+        print(keys)
